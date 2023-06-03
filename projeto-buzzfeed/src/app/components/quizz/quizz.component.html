@@ -23,6 +23,11 @@
 
   <div *ngIf=finished class="quizz_results">
     <h1>O Seu resultado é:</h1>
-    <p>Resultado</p>
+    <p>{{answerSelected}}</p>
+
+    <div class="content__back">
+      <a [routerLink]="['/']" (click)="exit()"> VOLTAR </a>
+    </div>
+
   </div>
 </div>
