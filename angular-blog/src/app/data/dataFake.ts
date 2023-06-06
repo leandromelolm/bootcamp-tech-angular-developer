@@ -22,9 +22,9 @@ export const dataFake = [
     },
     {
       "id":"4",
-      "title": "TESTE TITLE",
-      "description": "TESTE DESCRIPTION",
-      "photoCover":"TESTE PHOTO",
-      "linkProject":"https://github.com/leandromelolm/pdsw_sensorsus_ionic_frontend"
+      "title": "Angular vs Vue vs React",
+      "description": "Angular vs Vue vs React",
+      "photoCover":"https://www.educative.io/api/page/5436540852371456/image/download/4965476405870592",
+      "linkProject":""
     }
   ]

@@ -10,23 +10,11 @@
         </app-big-card>
     </div>
     <div class="articles__others">
-        <app-small-card
-            id="{{ smallCardId }}"
-            cardTitle="{{ smallCardTitle }}"
-            photoCover="{{ smallPhotoCover }}"
+        <app-small-card *ngFor="let article of smallArticle"
+            id="{{ article.id }}"
+            cardTitle="{{ article.title }}"
+            photoCover="{{ article.photoCover }}"
         >
         </app-small-card>
-        <app-small-card
-            id="{{ smallCardId2 }}"
-            cardTitle="{{ smallCardTitle2 }}"
-            photoCover="{{ smallPhotoCover2 }}"
-        >
-        </app-small-card>
-        <app-small-card
-            id="4"
-            cardTitle="Angular vs Vue vs React"
-            photoCover="https://www.educative.io/api/page/5436540852371456/image/download/4965476405870592"
-        >
-        </app-small-card>
-    </div>
+    </div>   
 </div>

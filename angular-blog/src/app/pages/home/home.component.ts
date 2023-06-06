@@ -14,16 +14,9 @@ export class HomeComponent {
   bigCardDescription:string = ""
   bigCardId = ""
 
-  private id:string | null = "0"
-  
+  private id:string | null = "0"  
 
-  smallPhotoCover:string = ""
-  smallCardTitle:string = ""
-  smallCardId: string | null = "0"
-
-  smallPhotoCover2:string = ""
-  smallCardTitle2:string = ""
-  smallCardId2: string | null = "0"
+  smallArticle:any;
 
   constructor(private route:ActivatedRoute) { }
 
@@ -31,7 +24,7 @@ export class HomeComponent {
     this.route.paramMap.subscribe( value =>
      this.id = value.get("id")
     )
-
+    // this.smallArticle = dataFake;
     this.setValuesToComponent("1")
   }
 
@@ -43,16 +36,8 @@ export class HomeComponent {
     this.photoCover = result.photoCover
     this.bigCardId = result.id
 
-    const res = dataFake.map(art => art)
-    console.log(res)
-    this.smallPhotoCover = res[1].photoCover
-    this.smallCardTitle = res[1].title
-    this.smallCardId = res[1].id
-
-    this.smallPhotoCover2 = res[2].photoCover
-    this.smallCardTitle2 = res[2].title
-    this.smallCardId2 = res[2].id
+    dataFake.shift(); // remove o primeiro elemento do array
+    this.smallArticle = dataFake.map(art => art)
   }
-  
 
 }
