@@ -36,8 +36,8 @@ export class HomeComponent {
     this.photoCover = result.photoCover
     this.bigCardId = result.id
 
-    dataFake.shift(); // remove o primeiro elemento do array
     this.smallArticle = dataFake.map(art => art)
+    this.smallArticle.shift(); // remove o primeiro elemento do array
   }
 
 }
