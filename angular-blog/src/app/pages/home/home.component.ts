@@ -37,7 +37,9 @@ export class HomeComponent {
     this.bigCardId = result.id
 
     this.smallArticle = dataFake.map(art => art)
-    this.smallArticle.shift(); // remove o primeiro elemento do array
+    // this.smallArticle.shift(); // remove o primeiro elemento do array
+    let idx = dataFake.indexOf(result)
+    this.smallArticle.splice(idx,1); // Remove o elemento que está no bigCard
   }
 
 }
